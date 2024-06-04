@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	tools:context=".ui.activity.ProfileActivity">
+
+	<com.google.android.material.appbar.MaterialToolbar
+		android:id="@+id/material_tool_bar_profile"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="@color/primary"
+		app:titleTextColor="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		>
+
+		<!-- Tombol Kembali -->
+		<androidx.appcompat.widget.AppCompatImageButton
+			android:id="@+id/action_back"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_gravity="start"
+			android:background="@drawable/square_button"
+			android:src="@drawable/ic_backspace" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Profil"
+			android:textSize="24sp"
+			android:layout_gravity="start"
+			android:textColor="@color/white"
+			android:layout_marginLeft="18dp"/>
+
+		<!-- Menu Dropdown -->
+		<ImageView
+			android:id="@+id/menu_dropdown"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_menu"
+			android:layout_gravity="end"
+			android:layout_marginEnd="16dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"/>
+
+	</com.google.android.material.appbar.MaterialToolbar>
+
+	<de.hdodenhof.circleimageview.CircleImageView
+		android:id="@+id/profile_image"
+		android:layout_width="256dp"
+		android:layout_height="256dp"
+		android:layout_marginTop="106dp"
+		android:src="@drawable/ic_preview_profile"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+
+	<TextView
+		android:id="@+id/tv_username"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Nama Pengguna"
+		android:textColor="@color/dark"
+		android:textSize="24sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="@+id/profile_image"
+		app:layout_constraintStart_toStartOf="@+id/profile_image"
+		app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+	<TextView
+		android:id="@+id/tv_email"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="43dp"
+		android:text="Email"
+		android:textColor="@color/dark"
+		android:layout_marginStart="32dp"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+	<TextView
+		android:id="@+id/tv_real_email"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		tools:text="namapengguna@gmail.com"
+		android:textColor="@color/dark"
+		android:layout_marginStart="32dp"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+
+	<TextView
+		android:id="@+id/tv_password"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="23dp"
+		tools:text="Password"
+		android:textColor="@color/dark"
+		android:layout_marginStart="32dp"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_real_email" />
+
+	<TextView
+		android:id="@+id/tv_real_password"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		tools:text="123123123"
+		android:textColor="@color/dark"
+		android:layout_marginStart="32dp"
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_password" />
+
+	<com.google.android.material.bottomnavigation.BottomNavigationView
+		android:id="@+id/bottomNavView"
+		android:layout_width="match_parent"
+		android:background="@color/primary"
+		app:itemTextColor="@color/white"
+		app:itemIconTint="@color/white"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:menu="@menu/bottom_nav_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
